@@ -1,0 +1,593 @@
+1.compare two json without order? 
+
+
+let person1={
+
+    name:"shajan",
+    age:"23"
+    
+    }
+    let person2={
+        
+        age:"23",
+        name:"shajan"
+    }
+    console.log(JSON.stringify(person1));
+
+output;
+
+{"name":"shajan","age":"23"}
+
+
+let person1={
+
+"name":"shajan",
+"age":"23"
+
+}
+let person2={
+    
+    "age":"23",
+    "name":"shajan"
+}
+console.log(JSON.stringify(person1)===JSON.stringify(person2));
+
+output;
+false
+
+
+2.display all flags in console ?
+
+let request =new XMLHttpRequest();
+ console.log(request)
+request.open("GET","https://restcountries.com/v3.1/all")
+console.log(request.open("GET","https://restcountries.com/v3.1/all"));
+request.send();
+request.onload=function(){
+
+let data =request.response
+
+let result =JSON.parse(data)
+
+for(let index of result){
+
+    console.log(index.flags.svg)
+}
+
+
+output;
+
+
+script.js:2 XMLHttpRequest {onreadystatechange: null, readyState: 0, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
+script.js:4 undefined
+script.js:25 https://flagcdn.com/mr.svg
+script.js:25 https://flagcdn.com/aw.svg
+script.js:25 https://flagcdn.com/ar.svg
+script.js:25 https://flagcdn.com/se.svg
+script.js:25 https://flagcdn.com/mv.svg
+script.js:25 https://flagcdn.com/mx.svg
+script.js:25 https://flagcdn.com/nz.svg
+script.js:25 https://flagcdn.com/ec.svg
+script.js:25 https://flagcdn.com/wf.svg
+script.js:25 https://flagcdn.com/ax.svg
+script.js:25 https://flagcdn.com/me.svg
+script.js:25 https://flagcdn.com/pk.svg
+script.js:25 https://flagcdn.com/pn.svg
+script.js:25 https://flagcdn.com/zm.svg
+script.js:25 https://flagcdn.com/sc.svg
+script.js:25 https://flagcdn.com/my.svg
+script.js:25 https://flagcdn.com/no.svg
+script.js:25 https://flagcdn.com/uz.svg
+script.js:25 https://flagcdn.com/vu.svg
+script.js:25 https://flagcdn.com/tf.svg
+script.js:25 https://flagcdn.com/cx.svg
+script.js:25 https://flagcdn.com/sg.svg
+script.js:25 https://flagcdn.com/sr.svg
+script.js:25 https://flagcdn.com/eh.svg
+script.js:25 https://flagcdn.com/mf.svg
+script.js:25 https://flagcdn.com/cr.svg
+script.js:25 https://flagcdn.com/hm.svg
+script.js:25 https://flagcdn.com/ie.svg
+script.js:25 https://flagcdn.com/aq.svg
+script.js:25 https://flagcdn.com/au.svg
+script.js:25 https://flagcdn.com/ly.svg
+script.js:25 https://flagcdn.com/qa.svg
+script.js:25 https://flagcdn.com/gl.svg
+script.js:25 https://flagcdn.com/mu.svg
+script.js:25 https://flagcdn.com/kz.svg
+script.js:25 https://flagcdn.com/io.svg
+script.js:25 https://flagcdn.com/al.svg
+script.js:25 https://flagcdn.com/bh.svg
+script.js:25 https://flagcdn.com/pg.svg
+script.js:25 https://flagcdn.com/bi.svg
+script.js:25 https://flagcdn.com/in.svg
+script.js:25 https://flagcdn.com/uy.svg
+script.js:25 https://flagcdn.com/lc.svg
+script.js:25 https://flagcdn.com/bb.svg
+script.js:25 https://flagcdn.com/nc.svg
+script.js:25 https://flagcdn.com/lv.svg
+script.js:25 https://flagcdn.com/ee.svg
+script.js:25 https://flagcdn.com/nu.svg
+script.js:25 https://flagcdn.com/bl.svg
+script.js:25 https://flagcdn.com/pr.svg
+script.js:25 https://flagcdn.com/gd.svg
+script.js:25 https://flagcdn.com/mo.svg
+script.js:25 https://flagcdn.com/cy.svg
+script.js:25 https://flagcdn.com/im.svg
+script.js:25 https://flagcdn.com/gr.svg
+script.js:25 https://flagcdn.com/sy.svg
+script.js:25 https://flagcdn.com/lt.svg
+script.js:25 https://flagcdn.com/cw.svg
+script.js:25 https://flagcdn.com/dm.svg
+script.js:25 https://flagcdn.com/ne.svg
+script.js:25 https://flagcdn.com/kg.svg
+script.js:25 https://flagcdn.com/tt.svg
+script.js:25 https://flagcdn.com/tg.svg
+script.js:25 https://flagcdn.com/ps.svg
+script.js:25 https://flagcdn.com/mg.svg
+script.js:25 https://flagcdn.com/hr.svg
+script.js:25 https://flagcdn.com/fo.svg
+script.js:25 https://flagcdn.com/ht.svg
+script.js:25 https://flagcdn.com/ms.svg
+script.js:25 https://flagcdn.com/ck.svg
+script.js:25 https://flagcdn.com/tl.svg
+script.js:25 https://flagcdn.com/mq.svg
+script.js:25 https://flagcdn.com/cu.svg
+script.js:25 https://flagcdn.com/tw.svg
+script.js:25 https://flagcdn.com/sz.svg
+script.js:25 https://flagcdn.com/ua.svg
+script.js:25 https://flagcdn.com/bm.svg
+script.js:25 https://flagcdn.com/kr.svg
+script.js:25 https://flagcdn.com/pe.svg
+script.js:25 https://flagcdn.com/iq.svg
+script.js:25 https://flagcdn.com/md.svg
+script.js:25 https://flagcdn.com/sm.svg
+script.js:25 https://flagcdn.com/ve.svg
+script.js:25 https://flagcdn.com/gy.svg
+script.js:25 https://flagcdn.com/ky.svg
+script.js:25 https://flagcdn.com/kh.svg
+script.js:25 https://flagcdn.com/cc.svg
+script.js:25 https://flagcdn.com/mt.svg
+script.js:25 https://flagcdn.com/lk.svg
+script.js:25 https://flagcdn.com/il.svg
+script.js:25 https://flagcdn.com/sd.svg
+script.js:25 https://flagcdn.com/vi.svg
+script.js:25 https://flagcdn.com/er.svg
+script.js:25 https://flagcdn.com/ml.svg
+script.js:25 https://flagcdn.com/so.svg
+script.js:25 https://flagcdn.com/nf.svg
+script.js:25 https://flagcdn.com/km.svg
+script.js:25 https://flagcdn.com/ni.svg
+script.js:25 https://flagcdn.com/ru.svg
+script.js:25 https://flagcdn.com/ug.svg
+script.js:25 https://flagcdn.com/nr.svg
+script.js:25 https://flagcdn.com/ch.svg
+script.js:25 https://flagcdn.com/pt.svg
+script.js:25 https://flagcdn.com/tj.svg
+script.js:25 https://flagcdn.com/ss.svg
+script.js:25 https://flagcdn.com/bv.svg
+script.js:25 https://flagcdn.com/fm.svg
+script.js:25 https://flagcdn.com/as.svg
+script.js:25 https://flagcdn.com/cz.svg
+script.js:25 https://flagcdn.com/bw.svg
+script.js:25 https://flagcdn.com/tn.svg
+script.js:25 https://flagcdn.com/ai.svg
+script.js:25 https://flagcdn.com/gw.svg
+script.js:25 https://flagcdn.com/sk.svg
+script.js:25 https://flagcdn.com/mh.svg
+script.js:25 https://flagcdn.com/dz.svg
+script.js:25 https://flagcdn.com/jm.svg
+script.js:25 https://flagcdn.com/mz.svg
+script.js:25 https://flagcdn.com/es.svg
+script.js:25 https://flagcdn.com/hn.svg
+script.js:25 https://flagcdn.com/nl.svg
+script.js:25 https://flagcdn.com/za.svg
+script.js:25 https://flagcdn.com/az.svg
+script.js:25 https://flagcdn.com/mk.svg
+script.js:25 https://flagcdn.com/gm.svg
+script.js:25 https://flagcdn.com/lr.svg
+script.js:25 https://flagcdn.com/lu.svg
+script.js:25 https://flagcdn.com/cv.svg
+script.js:25 https://flagcdn.com/bs.svg
+script.js:25 https://flagcdn.com/ge.svg
+script.js:25 https://flagcdn.com/ki.svg
+script.js:25 https://flagcdn.com/tz.svg
+script.js:25 https://flagcdn.com/cn.svg
+script.js:25 https://flagcdn.com/gt.svg
+script.js:25 https://flagcdn.com/st.svg
+script.js:25 https://flagcdn.com/de.svg
+script.js:25 https://flagcdn.com/sl.svg
+script.js:25 https://flagcdn.com/td.svg
+script.js:25 https://flagcdn.com/gb.svg
+script.js:25 https://flagcdn.com/si.svg
+script.js:25 https://flagcdn.com/th.svg
+script.js:25 https://flagcdn.com/id.svg
+script.js:25 https://flagcdn.com/mp.svg
+script.js:25 https://flagcdn.com/gu.svg
+script.js:25 https://flagcdn.com/fi.svg
+script.js:25 https://flagcdn.com/yt.svg
+script.js:25 https://flagcdn.com/gi.svg
+script.js:25 https://flagcdn.com/tm.svg
+script.js:25 https://flagcdn.com/xk.svg
+script.js:25 https://flagcdn.com/ci.svg
+script.js:25 https://flagcdn.com/ma.svg
+script.js:25 https://flagcdn.com/do.svg
+script.js:25 https://flagcdn.com/gh.svg
+script.js:25 https://flagcdn.com/va.svg
+script.js:25 https://flagcdn.com/je.svg
+script.js:25 https://flagcdn.com/tr.svg
+script.js:25 https://flagcdn.com/tv.svg
+script.js:25 https://flagcdn.com/ir.svg
+script.js:25 https://flagcdn.com/eg.svg
+script.js:25 https://flagcdn.com/dk.svg
+script.js:25 https://flagcdn.com/ke.svg
+script.js:25 https://flagcdn.com/bg.svg
+script.js:25 https://flagcdn.com/zw.svg
+script.js:25 https://flagcdn.com/ao.svg
+script.js:25 https://flagcdn.com/ng.svg
+script.js:25 https://flagcdn.com/pl.svg
+script.js:25 https://flagcdn.com/sn.svg
+script.js:25 https://flagcdn.com/sh.svg
+script.js:25 https://flagcdn.com/lb.svg
+script.js:25 https://flagcdn.com/ws.svg
+script.js:25 https://flagcdn.com/ph.svg
+script.js:25 https://flagcdn.com/gg.svg
+script.js:25 https://flagcdn.com/sv.svg
+script.js:25 https://flagcdn.com/kw.svg
+script.js:25 https://flagcdn.com/to.svg
+script.js:25 https://flagcdn.com/om.svg
+script.js:25 https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg
+script.js:25 https://flagcdn.com/kn.svg
+script.js:25 https://flagcdn.com/cf.svg
+script.js:25 https://flagcdn.com/rs.svg
+script.js:25 https://flagcdn.com/am.svg
+script.js:25 https://flagcdn.com/bd.svg
+script.js:25 https://flagcdn.com/la.svg
+script.js:25 https://flagcdn.com/cl.svg
+script.js:25 https://flagcdn.com/pf.svg
+script.js:25 https://flagcdn.com/pa.svg
+script.js:25 https://flagcdn.com/us.svg
+script.js:25 https://flagcdn.com/np.svg
+script.js:25 https://flagcdn.com/mm.svg
+script.js:25 https://flagcdn.com/fk.svg
+script.js:25 https://flagcdn.com/hu.svg
+script.js:25 https://flagcdn.com/pw.svg
+script.js:25 https://flagcdn.com/gq.svg
+script.js:25 https://flagcdn.com/gn.svg
+script.js:25 https://flagcdn.com/ae.svg
+script.js:25 https://flagcdn.com/tc.svg
+script.js:25 https://flagcdn.com/vg.svg
+script.js:25 https://flagcdn.com/li.svg
+script.js:25 https://flagcdn.com/ba.svg
+script.js:25 https://flagcdn.com/mw.svg
+script.js:25 https://flagcdn.com/bt.svg
+script.js:25 https://flagcdn.com/cm.svg
+script.js:25 https://flagcdn.com/ad.svg
+script.js:25 https://flagcdn.com/gp.svg
+script.js:25 https://flagcdn.com/cg.svg
+script.js:25 https://flagcdn.com/re.svg
+script.js:25 https://flagcdn.com/bf.svg
+script.js:25 https://flagcdn.com/jo.svg
+script.js:25 https://flagcdn.com/cd.svg
+script.js:25 https://flagcdn.com/tk.svg
+script.js:25 https://flagcdn.com/vn.svg
+script.js:25 https://flagcdn.com/sx.svg
+script.js:25 https://flagcdn.com/be.svg
+script.js:25 https://flagcdn.com/um.svg
+script.js:25 https://flagcdn.com/br.svg
+script.js:25 https://flagcdn.com/bz.svg
+script.js:25 https://flagcdn.com/ag.svg
+script.js:25 https://flagcdn.com/py.svg
+script.js:25 https://flagcdn.com/bj.svg
+script.js:25 https://flagcdn.com/bn.svg
+script.js:25 https://flagcdn.com/bo.svg
+script.js:25 https://flagcdn.com/dj.svg
+script.js:25 https://flagcdn.com/gf.svg
+script.js:25 https://flagcdn.com/ca.svg
+script.js:25 https://flagcdn.com/pm.svg
+script.js:25 https://flagcdn.com/jp.svg
+script.js:25 https://flagcdn.com/rw.svg
+script.js:25 https://flagcdn.com/vc.svg
+script.js:25 https://flagcdn.com/is.svg
+script.js:25 https://flagcdn.com/by.svg
+script.js:25 https://flagcdn.com/hk.svg
+script.js:25 https://flagcdn.com/ls.svg
+script.js:25 https://flagcdn.com/fj.svg
+script.js:25 https://flagcdn.com/at.svg
+script.js:25 https://flagcdn.com/co.svg
+script.js:25 https://flagcdn.com/ga.svg
+script.js:25 https://flagcdn.com/sa.svg
+script.js:25 https://flagcdn.com/gs.svg
+script.js:25 https://flagcdn.com/et.svg
+script.js:25 https://flagcdn.com/bq.svg
+script.js:25 https://flagcdn.com/mc.svg
+script.js:25 https://flagcdn.com/kp.svg
+script.js:25 https://flagcdn.com/it.svg
+script.js:25 https://flagcdn.com/na.svg
+script.js:25 https://flagcdn.com/mn.svg
+script.js:25 https://flagcdn.com/sb.svg
+script.js:25 https://flagcdn.com/ye.svg
+script.js:25 https://flagcdn.com/ro.svg
+script.js:25 https://flagcdn.com/sj.svg
+script.js:25 https://flagcdn.com/fr.svg
+
+
+
+
+
+3.contry name,region ,subregion,population ?
+let request =new XMLHttpRequest();
+ console.log(request)
+request.open("GET","https://restcountries.com/v3.1/all")
+console.log(request.open("GET","https://restcountries.com/v3.1/all"));
+request.send();
+request.onload=function(){
+
+let data =request.response
+
+let result =JSON.parse(data)
+
+
+ for(let index of result)
+ {
+
+
+    console.log("name : ",index.name.common.concat(",region : ",index.region).concat(",subregion : ",index.subregion).concat(",population : ",index.population))
+ }
+
+
+output;
+
+
+script.js:2 XMLHttpRequest {onreadystatechange: null, readyState: 0, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
+script.js:4 undefined
+script.js:17 name :  Mauritania,region : Africa,subregion : Western Africa,population : 4649660
+script.js:17 name :  Aruba,region : Americas,subregion : Caribbean,population : 106766
+script.js:17 name :  Argentina,region : Americas,subregion : South America,population : 45376763
+script.js:17 name :  Sweden,region : Europe,subregion : Northern Europe,population : 10353442
+script.js:17 name :  Maldives,region : Asia,subregion : Southern Asia,population : 540542
+script.js:17 name :  Mexico,region : Americas,subregion : North America,population : 128932753
+script.js:17 name :  New Zealand,region : Oceania,subregion : Australia and New Zealand,population : 5084300
+script.js:17 name :  Ecuador,region : Americas,subregion : South America,population : 17643060
+script.js:17 name :  Wallis and Futuna,region : Oceania,subregion : Polynesia,population : 11750
+script.js:17 name :  Åland Islands,region : Europe,subregion : Northern Europe,population : 29458
+script.js:17 name :  Montenegro,region : Europe,subregion : Southeast Europe,population : 621718
+script.js:17 name :  Pakistan,region : Asia,subregion : Southern Asia,population : 220892331
+script.js:17 name :  Pitcairn Islands,region : Oceania,subregion : Polynesia,population : 56
+script.js:17 name :  Zambia,region : Africa,subregion : Eastern Africa,population : 18383956
+script.js:17 name :  Seychelles,region : Africa,subregion : Eastern Africa,population : 98462
+script.js:17 name :  Malaysia,region : Asia,subregion : South-Eastern Asia,population : 32365998
+script.js:17 name :  Norway,region : Europe,subregion : Northern Europe,population : 5379475
+script.js:17 name :  Uzbekistan,region : Asia,subregion : Central Asia,population : 34232050
+script.js:17 name :  Vanuatu,region : Oceania,subregion : Melanesia,population : 307150
+script.js:17 name :  French Southern and Antarctic Lands,region : Antarctic,subregion : undefined,population : 400
+script.js:17 name :  Christmas Island,region : Oceania,subregion : Australia and New Zealand,population : 2072
+script.js:17 name :  Singapore,region : Asia,subregion : South-Eastern Asia,population : 5685807
+script.js:17 name :  Suriname,region : Americas,subregion : South America,population : 586634
+script.js:17 name :  Western Sahara,region : Africa,subregion : Northern Africa,population : 510713
+script.js:17 name :  Saint Martin,region : Americas,subregion : Caribbean,population : 38659
+script.js:17 name :  Costa Rica,region : Americas,subregion : Central America,population : 5094114
+script.js:17 name :  Heard Island and McDonald Islands,region : Antarctic,subregion : undefined,population : 0
+script.js:17 name :  Ireland,region : Europe,subregion : Northern Europe,population : 4994724
+script.js:17 name :  Antarctica,region : Antarctic,subregion : undefined,population : 1000
+script.js:17 name :  Australia,region : Oceania,subregion : Australia and New Zealand,population : 25687041
+script.js:17 name :  Libya,region : Africa,subregion : Northern Africa,population : 6871287
+script.js:17 name :  Qatar,region : Asia,subregion : Western Asia,population : 2881060
+script.js:17 name :  Greenland,region : Americas,subregion : North America,population : 56367
+script.js:17 name :  Mauritius,region : Africa,subregion : Eastern Africa,population : 1265740
+script.js:17 name :  Kazakhstan,region : Asia,subregion : Central Asia,population : 18754440
+script.js:17 name :  British Indian Ocean Territory,region : Africa,subregion : Eastern Africa,population : 3000
+script.js:17 name :  Albania,region : Europe,subregion : Southeast Europe,population : 2837743
+script.js:17 name :  Bahrain,region : Asia,subregion : Western Asia,population : 1701583
+script.js:17 name :  Papua New Guinea,region : Oceania,subregion : Melanesia,population : 8947027
+script.js:17 name :  Burundi,region : Africa,subregion : Eastern Africa,population : 11890781
+script.js:17 name :  India,region : Asia,subregion : Southern Asia,population : 1380004385
+script.js:17 name :  Uruguay,region : Americas,subregion : South America,population : 3473727
+script.js:17 name :  Saint Lucia,region : Americas,subregion : Caribbean,population : 183629
+script.js:17 name :  Barbados,region : Americas,subregion : Caribbean,population : 287371
+script.js:17 name :  New Caledonia,region : Oceania,subregion : Melanesia,population : 271960
+script.js:17 name :  Latvia,region : Europe,subregion : Northern Europe,population : 1901548
+script.js:17 name :  Estonia,region : Europe,subregion : Northern Europe,population : 1331057
+script.js:17 name :  Niue,region : Oceania,subregion : Polynesia,population : 1470
+script.js:17 name :  Saint Barthélemy,region : Americas,subregion : Caribbean,population : 4255
+script.js:17 name :  Puerto Rico,region : Americas,subregion : Caribbean,population : 3194034
+script.js:17 name :  Grenada,region : Americas,subregion : Caribbean,population : 112519
+script.js:17 name :  Macau,region : Asia,subregion : Eastern Asia,population : 649342
+script.js:17 name :  Cyprus,region : Europe,subregion : Southern Europe,population : 1207361
+script.js:17 name :  Isle of Man,region : Europe,subregion : Northern Europe,population : 85032
+script.js:17 name :  Greece,region : Europe,subregion : Southern Europe,population : 10715549
+script.js:17 name :  Syria,region : Asia,subregion : Western Asia,population : 17500657
+script.js:17 name :  Lithuania,region : Europe,subregion : Northern Europe,population : 2794700
+script.js:17 name :  Curaçao,region : Americas,subregion : Caribbean,population : 155014
+script.js:17 name :  Dominica,region : Americas,subregion : Caribbean,population : 71991
+script.js:17 name :  Niger,region : Africa,subregion : Western Africa,population : 24206636
+script.js:17 name :  Kyrgyzstan,region : Asia,subregion : Central Asia,population : 6591600
+script.js:17 name :  Trinidad and Tobago,region : Americas,subregion : Caribbean,population : 1399491
+script.js:17 name :  Togo,region : Africa,subregion : Western Africa,population : 8278737
+script.js:17 name :  Palestine,region : Asia,subregion : Western Asia,population : 4803269
+script.js:17 name :  Madagascar,region : Africa,subregion : Eastern Africa,population : 27691019
+script.js:17 name :  Croatia,region : Europe,subregion : Southeast Europe,population : 4047200
+script.js:17 name :  Faroe Islands,region : Europe,subregion : Northern Europe,population : 48865
+script.js:17 name :  Haiti,region : Americas,subregion : Caribbean,population : 11402533
+script.js:17 name :  Montserrat,region : Americas,subregion : Caribbean,population : 4922
+script.js:17 name :  Cook Islands,region : Oceania,subregion : Polynesia,population : 18100
+script.js:17 name :  Timor-Leste,region : Asia,subregion : South-Eastern Asia,population : 1318442
+script.js:17 name :  Martinique,region : Americas,subregion : Caribbean,population : 378243
+script.js:17 name :  Cuba,region : Americas,subregion : Caribbean,population : 11326616
+script.js:17 name :  Taiwan,region : Asia,subregion : Eastern Asia,population : 23503349
+script.js:17 name :  Eswatini,region : Africa,subregion : Southern Africa,population : 1160164
+script.js:17 name :  Ukraine,region : Europe,subregion : Eastern Europe,population : 44134693
+script.js:17 name :  Bermuda,region : Americas,subregion : North America,population : 63903
+script.js:17 name :  South Korea,region : Asia,subregion : Eastern Asia,population : 51780579
+script.js:17 name :  Peru,region : Americas,subregion : South America,population : 32971846
+script.js:17 name :  Iraq,region : Asia,subregion : Western Asia,population : 40222503
+script.js:17 name :  Moldova,region : Europe,subregion : Eastern Europe,population : 2617820
+script.js:17 name :  San Marino,region : Europe,subregion : Southern Europe,population : 33938
+script.js:17 name :  Venezuela,region : Americas,subregion : South America,population : 28435943
+script.js:17 name :  Guyana,region : Americas,subregion : South America,population : 786559
+script.js:17 name :  Cayman Islands,region : Americas,subregion : Caribbean,population : 65720
+script.js:17 name :  Cambodia,region : Asia,subregion : South-Eastern Asia,population : 16718971
+script.js:17 name :  Cocos (Keeling) Islands,region : Oceania,subregion : Australia and New Zealand,population : 544
+script.js:17 name :  Malta,region : Europe,subregion : Southern Europe,population : 525285
+script.js:17 name :  Sri Lanka,region : Asia,subregion : Southern Asia,population : 21919000
+script.js:17 name :  Israel,region : Asia,subregion : Western Asia,population : 9216900
+script.js:17 name :  Sudan,region : Africa,subregion : Northern Africa,population : 43849269
+script.js:17 name :  United States Virgin Islands,region : Americas,subregion : Caribbean,population : 106290
+script.js:17 name :  Eritrea,region : Africa,subregion : Eastern Africa,population : 5352000
+script.js:17 name :  Mali,region : Africa,subregion : Western Africa,population : 20250834
+script.js:17 name :  Somalia,region : Africa,subregion : Eastern Africa,population : 15893219
+script.js:17 name :  Norfolk Island,region : Oceania,subregion : Australia and New Zealand,population : 2302
+script.js:17 name :  Comoros,region : Africa,subregion : Eastern Africa,population : 869595
+script.js:17 name :  Nicaragua,region : Americas,subregion : Central America,population : 6624554
+script.js:17 name :  Russia,region : Europe,subregion : Eastern Europe,population : 144104080
+script.js:17 name :  Uganda,region : Africa,subregion : Eastern Africa,population : 45741000
+script.js:17 name :  Nauru,region : Oceania,subregion : Micronesia,population : 10834
+script.js:17 name :  Switzerland,region : Europe,subregion : Western Europe,population : 8654622
+script.js:17 name :  Portugal,region : Europe,subregion : Southern Europe,population : 10305564
+script.js:17 name :  Tajikistan,region : Asia,subregion : Central Asia,population : 9537642
+script.js:17 name :  South Sudan,region : Africa,subregion : Middle Africa,population : 11193729
+script.js:17 name :  Bouvet Island,region : Antarctic,subregion : undefined,population : 0
+script.js:17 name :  Micronesia,region : Oceania,subregion : Micronesia,population : 115021
+script.js:17 name :  American Samoa,region : Oceania,subregion : Polynesia,population : 55197
+script.js:17 name :  Czechia,region : Europe,subregion : Central Europe,population : 10698896
+script.js:17 name :  Botswana,region : Africa,subregion : Southern Africa,population : 2351625
+script.js:17 name :  Tunisia,region : Africa,subregion : Northern Africa,population : 11818618
+script.js:17 name :  Anguilla,region : Americas,subregion : Caribbean,population : 13452
+script.js:17 name :  Guinea-Bissau,region : Africa,subregion : Western Africa,population : 1967998
+script.js:17 name :  Slovakia,region : Europe,subregion : Central Europe,population : 5458827
+script.js:17 name :  Marshall Islands,region : Oceania,subregion : Micronesia,population : 59194
+script.js:17 name :  Algeria,region : Africa,subregion : Northern Africa,population : 44700000
+script.js:17 name :  Jamaica,region : Americas,subregion : Caribbean,population : 2961161
+script.js:17 name :  Mozambique,region : Africa,subregion : Eastern Africa,population : 31255435
+script.js:17 name :  Spain,region : Europe,subregion : Southern Europe,population : 47351567
+script.js:17 name :  Honduras,region : Americas,subregion : Central America,population : 9904608
+script.js:17 name :  Netherlands,region : Europe,subregion : Western Europe,population : 16655799
+script.js:17 name :  South Africa,region : Africa,subregion : Southern Africa,population : 59308690
+script.js:17 name :  Azerbaijan,region : Asia,subregion : Western Asia,population : 10110116
+script.js:17 name :  North Macedonia,region : Europe,subregion : Southeast Europe,population : 2077132
+script.js:17 name :  Gambia,region : Africa,subregion : Western Africa,population : 2416664
+script.js:17 name :  Liberia,region : Africa,subregion : Western Africa,population : 5057677
+script.js:17 name :  Luxembourg,region : Europe,subregion : Western Europe,population : 632275
+script.js:17 name :  Cape Verde,region : Africa,subregion : Western Africa,population : 555988
+script.js:17 name :  Bahamas,region : Americas,subregion : Caribbean,population : 393248
+script.js:17 name :  Georgia,region : Asia,subregion : Western Asia,population : 3714000
+script.js:17 name :  Kiribati,region : Oceania,subregion : Micronesia,population : 119446
+script.js:17 name :  Tanzania,region : Africa,subregion : Eastern Africa,population : 59734213
+script.js:17 name :  China,region : Asia,subregion : Eastern Asia,population : 1402112000
+script.js:17 name :  Guatemala,region : Americas,subregion : Central America,population : 16858333
+script.js:17 name :  São Tomé and Príncipe,region : Africa,subregion : Middle Africa,population : 219161
+script.js:17 name :  Germany,region : Europe,subregion : Western Europe,population : 83240525
+script.js:17 name :  Sierra Leone,region : Africa,subregion : Western Africa,population : 7976985
+script.js:17 name :  Chad,region : Africa,subregion : Middle Africa,population : 16425859
+script.js:17 name :  United Kingdom,region : Europe,subregion : Northern Europe,population : 67215293
+script.js:17 name :  Slovenia,region : Europe,subregion : Central Europe,population : 2100126
+script.js:17 name :  Thailand,region : Asia,subregion : South-Eastern Asia,population : 69799978
+script.js:17 name :  Indonesia,region : Asia,subregion : South-Eastern Asia,population : 273523621
+script.js:17 name :  Northern Mariana Islands,region : Oceania,subregion : Micronesia,population : 57557
+script.js:17 name :  Guam,region : Oceania,subregion : Micronesia,population : 168783
+script.js:17 name :  Finland,region : Europe,subregion : Northern Europe,population : 5530719
+script.js:17 name :  Mayotte,region : Africa,subregion : Eastern Africa,population : 226915
+script.js:17 name :  Gibraltar,region : Europe,subregion : Southern Europe,population : 33691
+script.js:17 name :  Turkmenistan,region : Asia,subregion : Central Asia,population : 6031187
+script.js:17 name :  Kosovo,region : Europe,subregion : Southeast Europe,population : 1775378
+script.js:17 name :  Ivory Coast,region : Africa,subregion : Western Africa,population : 26378275
+script.js:17 name :  Morocco,region : Africa,subregion : Northern Africa,population : 36910558
+script.js:17 name :  Dominican Republic,region : Americas,subregion : Caribbean,population : 10847904
+script.js:17 name :  Ghana,region : Africa,subregion : Western Africa,population : 31072945
+script.js:17 name :  Vatican City,region : Europe,subregion : Southern Europe,population : 451
+script.js:17 name :  Jersey,region : Europe,subregion : Northern Europe,population : 100800
+script.js:17 name :  Turkey,region : Asia,subregion : Western Asia,population : 84339067
+script.js:17 name :  Tuvalu,region : Oceania,subregion : Polynesia,population : 11792
+script.js:17 name :  Iran,region : Asia,subregion : Southern Asia,population : 83992953
+script.js:17 name :  Egypt,region : Africa,subregion : Northern Africa,population : 102334403
+script.js:17 name :  Denmark,region : Europe,subregion : Northern Europe,population : 5831404
+script.js:17 name :  Kenya,region : Africa,subregion : Eastern Africa,population : 53771300
+script.js:17 name :  Bulgaria,region : Europe,subregion : Southeast Europe,population : 6927288
+script.js:17 name :  Zimbabwe,region : Africa,subregion : Southern Africa,population : 14862927
+script.js:17 name :  Angola,region : Africa,subregion : Middle Africa,population : 32866268
+script.js:17 name :  Nigeria,region : Africa,subregion : Western Africa,population : 206139587
+script.js:17 name :  Poland,region : Europe,subregion : Central Europe,population : 37950802
+script.js:17 name :  Senegal,region : Africa,subregion : Western Africa,population : 16743930
+script.js:17 name :  Saint Helena, Ascension and Tristan da Cunha,region : Africa,subregion : Western Africa,population : 53192
+script.js:17 name :  Lebanon,region : Asia,subregion : Western Asia,population : 6825442
+script.js:17 name :  Samoa,region : Oceania,subregion : Polynesia,population : 198410
+script.js:17 name :  Philippines,region : Asia,subregion : South-Eastern Asia,population : 109581085
+script.js:17 name :  Guernsey,region : Europe,subregion : Northern Europe,population : 62999
+script.js:17 name :  El Salvador,region : Americas,subregion : Central America,population : 6486201
+script.js:17 name :  Kuwait,region : Asia,subregion : Western Asia,population : 4270563
+script.js:17 name :  Tonga,region : Oceania,subregion : Polynesia,population : 105697
+script.js:17 name :  Oman,region : Asia,subregion : Western Asia,population : 5106622
+script.js:17 name :  Afghanistan,region : Asia,subregion : Southern Asia,population : 40218234
+script.js:17 name :  Saint Kitts and Nevis,region : Americas,subregion : Caribbean,population : 53192
+script.js:17 name :  Central African Republic,region : Africa,subregion : Middle Africa,population : 4829764
+script.js:17 name :  Serbia,region : Europe,subregion : Southeast Europe,population : 6908224
+script.js:17 name :  Armenia,region : Asia,subregion : Western Asia,population : 2963234
+script.js:17 name :  Bangladesh,region : Asia,subregion : Southern Asia,population : 164689383
+script.js:17 name :  Laos,region : Asia,subregion : South-Eastern Asia,population : 7275556
+script.js:17 name :  Chile,region : Americas,subregion : South America,population : 19116209
+script.js:17 name :  French Polynesia,region : Oceania,subregion : Polynesia,population : 280904
+script.js:17 name :  Panama,region : Americas,subregion : Central America,population : 4314768
+script.js:17 name :  United States,region : Americas,subregion : North America,population : 329484123
+script.js:17 name :  Nepal,region : Asia,subregion : Southern Asia,population : 29136808
+script.js:17 name :  Myanmar,region : Asia,subregion : South-Eastern Asia,population : 54409794
+script.js:17 name :  Falkland Islands,region : Americas,subregion : South America,population : 2563
+script.js:17 name :  Hungary,region : Europe,subregion : Central Europe,population : 9749763
+script.js:17 name :  Palau,region : Oceania,subregion : Micronesia,population : 18092
+script.js:17 name :  Equatorial Guinea,region : Africa,subregion : Middle Africa,population : 1402985
+script.js:17 name :  Guinea,region : Africa,subregion : Western Africa,population : 13132792
+script.js:17 name :  United Arab Emirates,region : Asia,subregion : Western Asia,population : 9890400
+script.js:17 name :  Turks and Caicos Islands,region : Americas,subregion : Caribbean,population : 38718
+script.js:17 name :  British Virgin Islands,region : Americas,subregion : Caribbean,population : 30237
+script.js:17 name :  Liechtenstein,region : Europe,subregion : Western Europe,population : 38137
+script.js:17 name :  Bosnia and Herzegovina,region : Europe,subregion : Southeast Europe,population : 3280815
+script.js:17 name :  Malawi,region : Africa,subregion : Eastern Africa,population : 19129955
+script.js:17 name :  Bhutan,region : Asia,subregion : Southern Asia,population : 771612
+script.js:17 name :  Cameroon,region : Africa,subregion : Middle Africa,population : 26545864
+script.js:17 name :  Andorra,region : Europe,subregion : Southern Europe,population : 77265
+script.js:17 name :  Guadeloupe,region : Americas,subregion : Caribbean,population : 400132
+script.js:17 name :  Republic of the Congo,region : Africa,subregion : Middle Africa,population : 5657000
+script.js:17 name :  Réunion,region : Africa,subregion : Eastern Africa,population : 840974
+script.js:17 name :  Burkina Faso,region : Africa,subregion : Western Africa,population : 20903278
+script.js:17 name :  Jordan,region : Asia,subregion : Western Asia,population : 10203140
+script.js:17 name :  DR Congo,region : Africa,subregion : Middle Africa,population : 108407721
+script.js:17 name :  Tokelau,region : Oceania,subregion : Polynesia,population : 1411
+script.js:17 name :  Vietnam,region : Asia,subregion : South-Eastern Asia,population : 97338583
+script.js:17 name :  Sint Maarten,region : Americas,subregion : Caribbean,population : 40812
+script.js:17 name :  Belgium,region : Europe,subregion : Western Europe,population : 11555997
+script.js:17 name :  United States Minor Outlying Islands,region : Americas,subregion : North America,population : 300
+script.js:17 name :  Brazil,region : Americas,subregion : South America,population : 212559409
+script.js:17 name :  Belize,region : Americas,subregion : Central America,population : 397621
+script.js:17 name :  Antigua and Barbuda,region : Americas,subregion : Caribbean,population : 97928
+script.js:17 name :  Paraguay,region : Americas,subregion : South America,population : 7132530
+script.js:17 name :  Benin,region : Africa,subregion : Western Africa,population : 12123198
+script.js:17 name :  Brunei,region : Asia,subregion : South-Eastern Asia,population : 437483
+script.js:17 name :  Bolivia,region : Americas,subregion : South America,population : 11673029
+script.js:17 name :  Djibouti,region : Africa,subregion : Eastern Africa,population : 988002
+script.js:17 name :  French Guiana,region : Americas,subregion : South America,population : 254541
+script.js:17 name :  Canada,region : Americas,subregion : North America,population : 38005238
+script.js:17 name :  Saint Pierre and Miquelon,region : Americas,subregion : North America,population : 6069
+script.js:17 name :  Japan,region : Asia,subregion : Eastern Asia,population : 125836021
+script.js:17 name :  Rwanda,region : Africa,subregion : Eastern Africa,population : 12952209
+script.js:17 name :  Saint Vincent and the Grenadines,region : Americas,subregion : Caribbean,population : 110947
+script.js:17 name :  Iceland,region : Europe,subregion : Northern Europe,population : 366425
+script.js:17 name :  Belarus,region : Europe,subregion : Eastern Europe,population : 9398861
+script.js:17 name :  Hong Kong,region : Asia,subregion : Eastern Asia,population : 7500700
+script.js:17 name :  Lesotho,region : Africa,subregion : Southern Africa,population : 2142252
+script.js:17 name :  Fiji,region : Oceania,subregion : Melanesia,population : 896444
+script.js:17 name :  Austria,region : Europe,subregion : Central Europe,population : 8917205
+script.js:17 name :  Colombia,region : Americas,subregion : South America,population : 50882884
+script.js:17 name :  Gabon,region : Africa,subregion : Middle Africa,population : 2225728
+script.js:17 name :  Saudi Arabia,region : Asia,subregion : Western Asia,population : 34813867
+script.js:17 name :  South Georgia,region : Antarctic,subregion : undefined,population : 30
+script.js:17 name :  Ethiopia,region : Africa,subregion : Eastern Africa,population : 114963583
+script.js:17 name :  Caribbean Netherlands,region : Americas,subregion : Caribbean,population : 25987
+script.js:17 name :  Monaco,region : Europe,subregion : Western Europe,population : 39244
+script.js:17 name :  North Korea,region : Asia,subregion : Eastern Asia,population : 25778815
+script.js:17 name :  Italy,region : Europe,subregion : Southern Europe,population : 59554023
+script.js:17 name :  Namibia,region : Africa,subregion : Southern Africa,population : 2540916
+script.js:17 name :  Mongolia,region : Asia,subregion : Eastern Asia,population : 3278292
+script.js:17 name :  Solomon Islands,region : Oceania,subregion : Melanesia,population : 686878
+script.js:17 name :  Yemen,region : Asia,subregion : Western Asia,population : 29825968
+script.js:17 name :  Romania,region : Europe,subregion : Southeast Europe,population : 19286123
+script.js:17 name :  Svalbard and Jan Mayen,region : Europe,subregion : Northern Europe,population : 2562
+script.js:17 name :  France,region : Europe,subregion : Western Europe,population : 67391582
